@@ -1,0 +1,6 @@
+# Direct dependencies used for the recorded Linux Python 3.12 run.
+beautifulsoup4==4.15.0
+rank-bm25==0.2.2
+openai==1.109.1
+python-dotenv==1.2.4
+streamlit==1.66.1
