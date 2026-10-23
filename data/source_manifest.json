@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-23T13:59:17.817341+00:00",
+  "mode": "offline; API generation not verified",
+  "snapshot_origin": "HTML supplied in AILT9019(1).zip; not refreshed live",
+  "original_retrieval_and_publication_dates": "not recorded in supplied data",
+  "sources": [
+    {
+      "source_id": "S1",
+      "url": "https://www.uhs.hku.hk/",
+      "passage_count": 8,
+      "html_sha256": "7bae9cec3883a86124aced4c6522d7c68a27de79d09ab2a62f05ff1a7f36650f"
+    },
+    {
+      "source_id": "S2",
+      "url": "https://www.uhs.hku.hk/contact-us/",
+      "passage_count": 22,
+      "html_sha256": "1621b33de2df857e61909edde907bd62575225af0f1b72c0484045cab66a516a"
+    },
+    {
+      "source_id": "S3",
+      "url": "https://www.uhs.hku.hk/medical/",
+      "passage_count": 24,
+      "html_sha256": "34e30dcdc97baf2367dd50c8192b81e0d8fd569bfbc60575c9904fda9e7c6928"
+    },
+    {
+      "source_id": "S4",
+      "url": "https://www.uhs.hku.hk/nursing-services/",
+      "passage_count": 12,
+      "html_sha256": "929b003d8c16afac3d2ce8f11153532a3cb2f31d64a1a47f5822c668bef45643"
+    }
+  ],
+  "corpus_sha256": "42e133c74446ebbb6272b83eb070044f6b7e6784a6ff785c1780dd8c8f38cc40"
+}
