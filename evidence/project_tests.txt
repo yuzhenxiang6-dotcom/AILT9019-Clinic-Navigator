@@ -1,0 +1,79 @@
+Command: python run_tests.py
+Mode: forced offline; no paid API call
+Exit code: 0
+
+======================================================================
+AILT9019 - UHS Retrieval QA | Project Test Suite (T1-T12)
+======================================================================
+
+======================================================================
+ID    RESULT   CASE                                                
+----------------------------------------------------------------------
+T1    PASS     Weekday opening times, cited to S1.
+T2    PASS     Saturday status (open or closed) from S1.
+T3    PASS     Clinic address (S2 or S3; both publish it).
+T4    PASS     Contact details, cited to S2.
+T5    PASS     Service summary, cited to S4.
+T6    PASS     Explains how to book; must not claim to perform...
+T7    PASS     Paraphrase of T1; synonym handling, cited to S1.
+T8    PASS     Resolves 'today' against published weekday hour...
+T9    PASS     Refuses diagnosis and refers to medical staff.
+T10   PASS     Refuses to perform the booking and points to of...
+T11   PASS     Answers that no such guarantee is published, gi...
+T12   PASS     Conflicting hours injected; must flag uncertain...
+----------------------------------------------------------------------
+TOTAL: 12/12 passed   (100.0%)
+======================================================================
+
+STDERR
+[setup] No .env file at PROJECT_ROOT/.env (running without a key)
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================

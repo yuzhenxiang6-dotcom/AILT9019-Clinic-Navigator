@@ -1,0 +1,26 @@
+Command: python test_answer_content.py
+Mode: forced offline; no paid API call
+Exit code: 0
+
+PASS service answer contains named services, not just an introductory title
+PASS appointment question returns an actionable published route without booking
+PASS conflicting-hours fallback cites both sides of the injected disagreement
+Answer-content regressions: 3/3 passed
+
+STDERR
+[setup] No .env file at PROJECT_ROOT/.env (running without a key)
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================

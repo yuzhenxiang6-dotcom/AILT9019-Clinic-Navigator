@@ -1,0 +1,57 @@
+{
+  "verified_at_utc": "2026-10-23T13:59:17.817341+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "direct_dependencies": {
+    "beautifulsoup4": "4.15.0",
+    "rank-bm25": "0.2.2",
+    "openai": "1.109.1",
+    "python-dotenv": "1.2.4",
+    "streamlit": "1.66.1"
+  },
+  "mode": "offline; API generation not verified",
+  "passages": 66,
+  "project_cases_passed": 12,
+  "project_cases_total": 12,
+  "corpus_rebuild_equal": true,
+  "executions": [
+    {
+      "command": [
+        "run_tests.py"
+      ],
+      "exit_code": 0,
+      "log": "project_tests.txt"
+    },
+    {
+      "command": [
+        "test_query.py"
+      ],
+      "exit_code": 0,
+      "log": "unit_tests.txt"
+    },
+    {
+      "command": [
+        "test_answer_content.py"
+      ],
+      "exit_code": 0,
+      "log": "answer_content_tests.txt"
+    },
+    {
+      "command": [
+        "verify_ui.py"
+      ],
+      "exit_code": 0,
+      "log": "ui_tests.txt"
+    },
+    {
+      "command": [
+        "ingest.py",
+        "--out",
+        "/tmp/tmprzlf5epp/passages.json"
+      ],
+      "exit_code": 0,
+      "log": "ingestion.txt"
+    }
+  ],
+  "all_checks_passed": true
+}

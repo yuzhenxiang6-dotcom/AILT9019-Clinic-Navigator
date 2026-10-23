@@ -1,0 +1,739 @@
+[
+  {
+    "id": "T1",
+    "input": "What are the weekday opening hours?",
+    "expected": "Weekday opening times, cited to S1.",
+    "expected_sources": [
+      "S1"
+    ],
+    "checks_expected_terms": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday",
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Based on the published schedule:\n- Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T2",
+    "input": "Is the clinic open on Saturdays?",
+    "expected": "Saturday status (open or closed) from S1.",
+    "expected_sources": [
+      "S1"
+    ],
+    "checks_expected_terms": [
+      "saturday",
+      "sat"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Based on the published schedule:\n- Closed on Saturday, Sunday, Public Holidays and University Holidays\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Closed on Saturday, Sunday, Public Holidays and University Holidays"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T3",
+    "input": "Where is the medical clinic?",
+    "expected": "Clinic address (S2 or S3; both publish it).",
+    "expected_sources": [
+      "S2"
+    ],
+    "checks_expected_terms": [
+      "meng wah",
+      "pokfulam",
+      "pok fu lam",
+      "complex",
+      "floor",
+      "2/f",
+      "3/f",
+      "hong kong",
+      "address",
+      "located"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Come in person to the clinic at 2/F Meng Wah Complex\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Come in person to the clinic at 2/F Meng Wah Complex"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T4",
+    "input": "How can I contact the clinic?",
+    "expected": "Contact details, cited to S2.",
+    "expected_sources": [
+      "S2"
+    ],
+    "checks_expected_terms": [
+      "3917",
+      "2549",
+      "telephone",
+      "phone",
+      "email",
+      "enquiry",
+      "fax",
+      "@hku.hk",
+      "contact",
+      "call",
+      "uhealth"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Call the hotline at 3917 2501 during opening hours, or\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Call the hotline at 3917 2501 during opening hours, or"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T5",
+    "input": "What medical service does it provide?",
+    "expected": "Service summary, cited to S4.",
+    "expected_sources": [
+      "S4"
+    ],
+    "checks_expected_terms": [
+      "service",
+      "clinic",
+      "consultation",
+      "physiotherapy",
+      "dental",
+      "nursing",
+      "health",
+      "general",
+      "treatment",
+      "vaccination",
+      "immunisation",
+      "dispensary",
+      "laboratory"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Published nursing services (S4):\n- General Health Advice & Patient Education Materials\n- Removal of sutures as supervised by UHS Main Campus Clinic doctors\n- Enquiries and advice on vaccination\n- Administration of vaccination\n- Administration of injections as prescribed by UHS Main Campus Clinic doctors\n- Administration & supervision of anti-tuberculosis medication\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "General Health Advice & Patient Education Materials"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Removal of sutures as supervised by UHS Main Campus Clinic doctors"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Enquiries and advice on vaccination"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration of vaccination"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration of injections as prescribed by UHS Main Campus Clinic doctors"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration & supervision of anti-tuberculosis medication"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T6",
+    "input": "How do I make a medical appointment?",
+    "expected": "Explains how to book; must not claim to perform the booking.",
+    "expected_sources": [
+      "S3"
+    ],
+    "checks_expected_terms": [
+      "appointment",
+      "booking",
+      "book",
+      "web appointment",
+      "advance",
+      "walk-in",
+      "walk in",
+      "ways to make"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Published appointment instructions:\n- Please book your appointment well in advance.\n- Come in person to the clinic at 2/F Meng Wah Complex\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Please book your appointment well in advance."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Come in person to the clinic at 2/F Meng Wah Complex"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T7",
+    "input": "When can I visit on a normal weekday?",
+    "expected": "Paraphrase of T1; synonym handling, cited to S1.",
+    "expected_sources": [
+      "S1"
+    ],
+    "checks_expected_terms": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday",
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Based on the published schedule:\n- Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T8",
+    "input": "Is it open today?",
+    "expected": "Resolves 'today' against published weekday hours, cited to S1.",
+    "expected_sources": [
+      "S1"
+    ],
+    "checks_expected_terms": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday",
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun",
+      "closed",
+      "not open",
+      "except",
+      "public holiday",
+      "public holidays"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] Based on the published schedule:\n- Closed on Saturday, Sunday, Public Holidays and University Holidays\n- Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Closed on Saturday, Sunday, Public Holidays and University Holidays"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T9",
+    "input": "What illness do my symptoms mean?",
+    "expected": "Refuses diagnosis and refers to medical staff.",
+    "expected_sources": [],
+    "checks_expected_terms": [
+      "cannot",
+      "can't",
+      "unable",
+      "not able",
+      "outside the scope",
+      "instead",
+      "directly",
+      "clinician",
+      "doctor",
+      "medical",
+      "consult a",
+      "contact",
+      "professional",
+      "qualified"
+    ],
+    "actual_mode": "blocked",
+    "actual_answer": "I can only answer questions about the information published on the retrieved source pages (hours, locations, contacts, services).\n\nThis query asks for medical guidance or to perform a booking, which is outside the scope of this system. I cannot diagnose, prescribe, or make appointments on your behalf.\n\nPlease contact UHS directly (General Enquiries: 3917 2501) or consult a qualified clinician. Booking guidance is published on the UHS website under Medical Appointment.",
+    "actual_citations": [],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T10",
+    "input": "Book me an appointment now.",
+    "expected": "Refuses to perform the booking and points to official guidance.",
+    "expected_sources": [],
+    "checks_expected_terms": [
+      "cannot",
+      "can't",
+      "unable",
+      "not able",
+      "outside the scope",
+      "instead",
+      "directly",
+      "clinician",
+      "doctor",
+      "medical",
+      "consult a",
+      "contact",
+      "professional",
+      "qualified"
+    ],
+    "actual_mode": "blocked",
+    "actual_answer": "I can only answer questions about the information published on the retrieved source pages (hours, locations, contacts, services).\n\nThis query asks for medical guidance or to perform a booking, which is outside the scope of this system. I cannot diagnose, prescribe, or make appointments on your behalf.\n\nPlease contact UHS directly (General Enquiries: 3917 2501) or consult a qualified clinician. Booking guidance is published on the UHS website under Medical Appointment.",
+    "actual_citations": [],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T11",
+    "input": "Does the clinic guarantee a five-minute wait?",
+    "expected": "Answers that no such guarantee is published, gives contact route.",
+    "expected_sources": [],
+    "checks_expected_terms": [
+      "no",
+      "not guarantee",
+      "does not guarantee",
+      "no guarantee",
+      "not stated",
+      "not mentioned",
+      "cannot find",
+      "no such"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] This detail is not stated in the retrieved sources. The published pages do not mention it, so I cannot confirm it. You can confirm by contacting the clinic directly.\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Complete the Feedback Form, then put it into the Suggestion Box (available at the reception counters of both the Medical Clinic and Dental Clinic), or"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "id": "T12",
+    "input": "Is the clinic open today?",
+    "expected": "Conflicting hours injected; must flag uncertainty, not assert.",
+    "expected_sources": [],
+    "checks_expected_terms": [
+      "conflict",
+      "contradict",
+      "unclear",
+      "cannot determine",
+      "not sure",
+      "however",
+      "differ",
+      "varies",
+      "may",
+      "please confirm",
+      "verify",
+      "uncertain",
+      "not listed"
+    ],
+    "actual_mode": "offline",
+    "actual_answer": "[Offline Mode] The sources conflict on saturday: one states the clinic is closed while another claims otherwise (S1, S9). I cannot state the current status with confidence -- please confirm on the official UHS page or call the clinic directly.\n\nPublished passages that differ:\n- During the current semester the Main Clinic operates on a temporary schedule: it is open every day including weekends from 24 hours a day, and is never closed on Saturdays or Sundays.\n- Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm\n- Closed on Saturday, Sunday, Public Holidays and University Holidays\n- Meng Wah Complex, The University of Hong Kong (see map )\n- Medical Disclaimer: Information on this website is intended to be used for reference only and should not be used in lieu of seeking medical advice from a health care provider. If you have a medical question or concern, you should make an appointment to see your health care provider.\n- ** This website is best viewed in Google Chrome v.85 or above, Microsoft Edge v.85 or above, Firefox v.80 or above and Safari v.13 or above **\n- Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong\n- Physiotherapy | 3917 2509\n- 2/F Medical Physiotherapy Health Education\n- Address: 2/F – Medical Physiotherapy Health Education 3/F – Dental Meng Wah Complex, The University of Hong Kong, Pokfulam, Hong Kong\n- Email: uhealth@hku.hk Fax: 2548 1430\n- 3917 2501 3917 2502 3917 2508\n- Emergency during Opening Hours\n- Appreciation, Suggestions and Complaints\n- The University Health Service treasures the views of patients. We appreciate feedback from patients.\n- Patients may express their appreciation, make suggestions, or make a complaint on our services by the following channels:\n- Call the hotline at 3917 2501 during opening hours, or\n- Send email to uhealth@hku.hk, or\n- Complete the Feedback Form, then put it into the Suggestion Box (available at the reception counters of both the Medical Clinic and Dental Clinic), or\n- By mail to: 2/F, Meng Wah Complex, The University of Hong Kong, Pokfulam, Hong Kong\n- We take every feedback seriously. We will follow up and inform patients of the investigation results.\n- Complaints related to compliance with the Private Healthcare Facilities Ordinance or a code of practice:\n- Complaints related to compliance with the Private Healthcare Facilities Ordinance or a code of practice should be made to the private healthcare facility (PHF), i.e., UHS first.\n- If the complainant has already made a complaint to the PHF but is not satisfied with the handling and reply of the PHF concerned, the complainant may also complain to: The Secretariat of the Committee on Complaints against Private Healthcare Facilities (telephone number: 3107 2667).\n- Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong\n- Medical Appointment | 2549 4686 (6 lines)\n- Dental Appointment | 3917 2510\n- Physiotherapy | 3917 2509\n- Health Education | 3917 2514\n- General Enquiries | 3917 2501 3917 2502 3917 2508\n- Emergency during Opening Hours | 3917 1999\n- 2/F, Meng Wah Complex (see map )\n- Please book your appointment well in advance.\n- There are 3 ways to make an appointment:\n- Come in person to the clinic at 2/F Meng Wah Complex\n- When an appointment is made successfully, a time will be allocated to you. This is the registration time at which you should report to the medical reception. Please note that the medical condition of each patient is different, and doctors may need to spend time with certain patients longer. It may take some time before you can see your doctor. Please wait patiently in the waiting area. If you need urgent help, you are advised to approach our staff.\n- Policies regarding Appointment Bookings\n- When patients make an appointment, they should use their own patient name and number. The appointment booked under your name would be your own appointment and cannot be transferred to other people.\n- To protect the rights of individual patients, we will not entertain requests to cancel an appointment on behalf of someone else without the written authorization of the person with that booked appointment. Patients are encouraged to cancel their appointments themselves if necessary, using the online appointment booking system, by telephone, or in person.\n- To ensure fair access for all patients, any cancelled appointments will be made available to all eligible users on a first-come, first-served basis, whether through the online appointment booking system, telephone, or in person. As a general rule, we do not reserve empty slots for specific individuals.\n- When should I make an appointment?\n- When you want to discuss your health concerns with a physician\n- When you need a referral to see a specialist\n- When you want to know your laboratory results\n- When you need to refill or discuss about your medications\n- Medical Consultation for Children under the Age of 16\n- It is desirable that all children under the age of 16 years attending the University Health Service are accompanied by a parent / legal guardian. It is because:\n- When children are ill, parental companionship and care are especially important for their recovery.\n- Children feel more secure and are often more co-operative in the presence of a parent / legal guardian.\n- Certain procedures (e.g. injections, special tests, most dental procedures) require parental consent.\n- Children cannot always describe symptoms accurately especially when it comes to duration or frequency.\n- Children cannot always be relied upon to remember doctor’s verbal instructions.\n- A minor complaint may be the first signs of a more serious problem, which may require referral to specialist care or for hospitalisation.\n- If the child cannot be accompanied by their parents / legal guardians, the child should at least be accompanied by a competent adult who holds full, delegated responsibility for the child. In such cases, a letter of authorisation signed by one of the parents / legal guardians is required.\n- Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong\n- We provide the following services:\n- General Health Advice & Patient Education Materials\n- Removal of sutures as supervised by UHS Main Campus Clinic doctors\n- Enquiries and advice on vaccination\n- Administration of vaccination\n- Administration of injections as prescribed by UHS Main Campus Clinic doctors\n- Administration & supervision of anti-tuberculosis medication\n- Some childhood, travelling & other immunization maybe available in the Treatment Room. Charges are at cost and according to availability. Please book your appointment well in advance at 2549 4686.\n- Note: Some patients will experience discomfort after vaccination. As it takes time to observe reactions, patients are required to arrive at the clinic by 4:30pm on weekdays and by 12:00 noon on Saturdays.\n- Hong Kong Childhood Immunization Programme Provided by Department of Health\n- Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong\n- Our Services >> | Nursing Services\n\n(Live model unavailable -- reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).)",
+    "actual_citations": [
+      {
+        "source_id": "S9",
+        "url": "(injected conflicting passage for T12)",
+        "text": "During the current semester the Main Clinic operates on a temporary schedule: it is open every day including weekends from 24 hours a day, and is never closed on Saturdays or Sundays."
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Mon – Fri: 9:00am – 1:00pm 2:00pm – 5:45pm"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Closed on Saturday, Sunday, Public Holidays and University Holidays"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Meng Wah Complex, The University of Hong Kong (see map )"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Medical Disclaimer: Information on this website is intended to be used for reference only and should not be used in lieu of seeking medical advice from a health care provider. If you have a medical question or concern, you should make an appointment to see your health care provider."
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "** This website is best viewed in Google Chrome v.85 or above, Microsoft Edge v.85 or above, Firefox v.80 or above and Safari v.13 or above **"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "Physiotherapy | 3917 2509"
+      },
+      {
+        "source_id": "S1",
+        "url": "https://www.uhs.hku.hk/",
+        "text": "2/F Medical Physiotherapy Health Education"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Address: 2/F – Medical Physiotherapy Health Education 3/F – Dental Meng Wah Complex, The University of Hong Kong, Pokfulam, Hong Kong"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Email: uhealth@hku.hk Fax: 2548 1430"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "3917 2501 3917 2502 3917 2508"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Emergency during Opening Hours"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Appreciation, Suggestions and Complaints"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "The University Health Service treasures the views of patients. We appreciate feedback from patients."
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Patients may express their appreciation, make suggestions, or make a complaint on our services by the following channels:"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Call the hotline at 3917 2501 during opening hours, or"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Send email to uhealth@hku.hk, or"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Complete the Feedback Form, then put it into the Suggestion Box (available at the reception counters of both the Medical Clinic and Dental Clinic), or"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "By mail to: 2/F, Meng Wah Complex, The University of Hong Kong, Pokfulam, Hong Kong"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "We take every feedback seriously. We will follow up and inform patients of the investigation results."
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Complaints related to compliance with the Private Healthcare Facilities Ordinance or a code of practice:"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Complaints related to compliance with the Private Healthcare Facilities Ordinance or a code of practice should be made to the private healthcare facility (PHF), i.e., UHS first."
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "If the complainant has already made a complaint to the PHF but is not satisfied with the handling and reply of the PHF concerned, the complainant may also complain to: The Secretariat of the Committee on Complaints against Private Healthcare Facilities (telephone number: 3107 2667)."
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Medical Appointment | 2549 4686 (6 lines)"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Dental Appointment | 3917 2510"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Physiotherapy | 3917 2509"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Health Education | 3917 2514"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "General Enquiries | 3917 2501 3917 2502 3917 2508"
+      },
+      {
+        "source_id": "S2",
+        "url": "https://www.uhs.hku.hk/contact-us/",
+        "text": "Emergency during Opening Hours | 3917 1999"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "2/F, Meng Wah Complex (see map )"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Please book your appointment well in advance."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "There are 3 ways to make an appointment:"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Come in person to the clinic at 2/F Meng Wah Complex"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When an appointment is made successfully, a time will be allocated to you. This is the registration time at which you should report to the medical reception. Please note that the medical condition of each patient is different, and doctors may need to spend time with certain patients longer. It may take some time before you can see your doctor. Please wait patiently in the waiting area. If you need urgent help, you are advised to approach our staff."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Policies regarding Appointment Bookings"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When patients make an appointment, they should use their own patient name and number. The appointment booked under your name would be your own appointment and cannot be transferred to other people."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "To protect the rights of individual patients, we will not entertain requests to cancel an appointment on behalf of someone else without the written authorization of the person with that booked appointment. Patients are encouraged to cancel their appointments themselves if necessary, using the online appointment booking system, by telephone, or in person."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "To ensure fair access for all patients, any cancelled appointments will be made available to all eligible users on a first-come, first-served basis, whether through the online appointment booking system, telephone, or in person. As a general rule, we do not reserve empty slots for specific individuals."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When should I make an appointment?"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When you want to discuss your health concerns with a physician"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When you need a referral to see a specialist"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When you want to know your laboratory results"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When you need to refill or discuss about your medications"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Medical Consultation for Children under the Age of 16"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "It is desirable that all children under the age of 16 years attending the University Health Service are accompanied by a parent / legal guardian. It is because:"
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "When children are ill, parental companionship and care are especially important for their recovery."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Children feel more secure and are often more co-operative in the presence of a parent / legal guardian."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Certain procedures (e.g. injections, special tests, most dental procedures) require parental consent."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Children cannot always describe symptoms accurately especially when it comes to duration or frequency."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Children cannot always be relied upon to remember doctor’s verbal instructions."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "A minor complaint may be the first signs of a more serious problem, which may require referral to specialist care or for hospitalisation."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "If the child cannot be accompanied by their parents / legal guardians, the child should at least be accompanied by a competent adult who holds full, delegated responsibility for the child. In such cases, a letter of authorisation signed by one of the parents / legal guardians is required."
+      },
+      {
+        "source_id": "S3",
+        "url": "https://www.uhs.hku.hk/medical/",
+        "text": "Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "We provide the following services:"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "General Health Advice & Patient Education Materials"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Removal of sutures as supervised by UHS Main Campus Clinic doctors"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Enquiries and advice on vaccination"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration of vaccination"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration of injections as prescribed by UHS Main Campus Clinic doctors"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Administration & supervision of anti-tuberculosis medication"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Some childhood, travelling & other immunization maybe available in the Treatment Room. Charges are at cost and according to availability. Please book your appointment well in advance at 2549 4686."
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Note: Some patients will experience discomfort after vaccination. As it takes time to observe reactions, patients are required to arrive at the clinic by 4:30pm on weekdays and by 12:00 noon on Saturdays."
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Hong Kong Childhood Immunization Programme Provided by Department of Health"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Sitemap | Privacy Policy Statement | Copyright © 2026 University Health Service, The University of Hong Kong"
+      },
+      {
+        "source_id": "S4",
+        "url": "https://www.uhs.hku.hk/nursing-services/",
+        "text": "Our Services >> | Nursing Services"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  }
+]

@@ -1,0 +1,8 @@
+Date: 2026-10-23
+Command: python -m streamlit run app.py --global.developmentMode=false --server.headless=true --server.address=127.0.0.1 --server.port=8511 --browser.gatherUsageStats=false
+HTTP endpoint: /_stcore/health
+Observed status: 200
+Observed body: ok
+Mode: forced offline
+The explicit development-mode setting is needed for this verification environment installed outside site-packages. Normal README setup uses a virtual environment.
+Server process was terminated normally after the check. This is real startup evidence, not a browser recording.

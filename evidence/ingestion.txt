@@ -1,0 +1,22 @@
+Command: python ingest.py --out /tmp/tmprzlf5epp/passages.json
+Mode: forced offline; no paid API call
+Exit code: 0
+
+[*] Parsing S1.html -> source_id=S1
+    -> 8 passages
+[*] Parsing S2.html -> source_id=S2
+    -> 22 passages
+[*] Parsing S3.html -> source_id=S3
+    -> 24 passages
+[*] Parsing S4.html -> source_id=S4
+    -> 12 passages
+
+[OK] Wrote 66 passages to /tmp/tmprzlf5epp/passages.json
+     S1: 8
+     S2: 22
+     S3: 24
+     S4: 12
+
+STDERR
+
+Structural equality with distributed corpus: True

@@ -1,0 +1,57 @@
+Command: python verify_ui.py
+Mode: forced offline; no paid API call
+Exit code: 0
+
+PASS 'What are the weekday opening hours?'
+PASS 'What illness do my symptoms mean?'
+PASS 'How do I make a medical appointment?'
+PASS 'Book me an appointment now.'
+UI scenarios: 4/4 passed; actual Streamlit inputs/buttons exercised in forced-offline mode.
+
+STDERR
+2026-10-23 09:59:15.231 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-23 09:59:15.439 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-10-23 09:59:15.440 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-10-23 09:59:15.440 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-10-23 09:59:15.440 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+[setup] No .env file at PROJECT_ROOT/.env (running without a key)
+2026-10-23 09:59:15.768 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-10-23 09:59:15.768 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-10-23 09:59:15.771 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-10-23 09:59:15.772 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-10-23 09:59:15.772 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-10-23 09:59:15.772 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-10-23 09:59:15.772 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+2026-10-23 09:59:16.372 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-10-23 09:59:16.372 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-10-23 09:59:16.375 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-10-23 09:59:16.375 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-10-23 09:59:16.375 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-10-23 09:59:16.375 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-10-23 09:59:16.375 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-10-23 09:59:16.388 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-10-23 09:59:16.389 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-10-23 09:59:16.391 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-10-23 09:59:16.391 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-10-23 09:59:16.391 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-10-23 09:59:16.392 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-10-23 09:59:16.392 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+==============================================================
+[OFFLINE MODE] The live API call did not succeed.
+[OFFLINE MODE] Reason: RuntimeError: No API key found in .env (DASHSCOPE_API_KEY).
+[OFFLINE MODE] No key is configured - this is the expected behaviour when .env is missing.
+==============================================================
+2026-10-23 09:59:16.415 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-10-23 09:59:16.416 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
+2026-10-23 09:59:16.418 DEBUG   streamlit.runtime.scriptrunner.script_runner: Beginning script thread
+2026-10-23 09:59:16.418 DEBUG   streamlit.runtime.scriptrunner.script_runner: Running script
+2026-10-23 09:59:16.419 DEBUG   streamlit.runtime.media_file_manager: Disconnecting files for session with ID test session id
+2026-10-23 09:59:16.419 DEBUG   streamlit.runtime.media_file_manager: Sessions still active: dict_keys([])
+2026-10-23 09:59:16.419 DEBUG   streamlit.runtime.media_file_manager: Files: 0; Sessions with files: 0
+2026-10-23 09:59:16.433 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned files...
+2026-10-23 09:59:16.433 DEBUG   streamlit.runtime.media_file_manager: Removing orphaned deferred callables...
