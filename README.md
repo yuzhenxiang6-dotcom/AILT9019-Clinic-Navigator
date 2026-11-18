@@ -1,13 +1,13 @@
 # Campus Clinic Information Navigator
 
-AILT9019 midterm prototype for published HKU University Health Service (UHS)
+AILT9019 Group 51 course project for published HKU University Health Service (UHS)
 Main Campus Clinic logistics. A question enters the Streamlit interface,
 BM25 retrieves local passages, and the system returns source-grounded output.
 The app cannot diagnose, recommend treatment or perform bookings.
 
-## Actually verified on 23 October 2026
+## Fresh-clone verification on 18 November 2026
 
-Linux, Python 3.12.14; forced offline, no API credentials or paid calls used.
+Fresh public repository clone and isolated Linux environment with Python 3.12.14 and the pinned direct dependencies; forced offline, no API credentials or paid calls used.
 
 | Check | Result | Evidence |
 |---|---|---|
@@ -18,13 +18,13 @@ Linux, Python 3.12.14; forced offline, no API credentials or paid calls used.
 | Rebuild from supplied HTML | Exactly reproduces 66 records | [ingestion.txt](evidence/ingestion.txt) |
 
 These are team-defined checks, not teacher-issued tests or a clinical safety
-evaluation. **Online model generation is not verified.** The UI checks enter
+evaluation. **The 18 November run did not test online generation.** The UI checks enter
 text and click Search through Streamlit AppTest; they are not a video.
 See [evidence/README.md](evidence/README.md) for limitations and
 [cases.json](evidence/cases.json) for input, expected result, actual answer,
 citations and outcome for every project case.
 
-Real server startup was also checked: HTTP 200 from `/_stcore/health`; see [server_startup.txt](evidence/server_startup.txt). The server was stopped after verification.
+The earlier 23 October server startup check recorded HTTP 200 from `/_stcore/health`; see [server_startup.txt](evidence/server_startup.txt). The server was stopped after verification.
 
 ## Install and run
 
@@ -102,12 +102,11 @@ Added regressions check real service names, actionable appointment instructions,
 and both citations for a conflict. Passing does not establish correctness on
 arbitrary queries. T8 retrieves a weekly schedule; it does not test a real clock.
 
-## Optional online mode - unverified
+## Optional online mode
 
 After the teaching team confirms the key, endpoint and model, copy
 `.env.example` to `.env`, configure those values locally, set
-`DASHSCOPE_FORCE_OFFLINE=0` and restart. The supplied endpoint/model names
-have not been validated here. The example contains a placeholder, not a key.
+`DASHSCOPE_FORCE_OFFLINE=0` and restart. A 26 October automated interaction with the course endpoint and qwen3.8-flash returned an online opening-hours answer with citations; service availability and the current key were not rechecked on 18 November. The example contains no key.
 
 `python run_tests.py --online` intentionally uses the configured live model
 and can consume quota. Do not describe a labelled offline fallback as an
@@ -145,7 +144,7 @@ Keep: browser query -> retrieval -> cited output, labelled offline fallback,
 and finite refusal checks. Defer: MCP, SKILL.md, semantic retrieval, local-model
 fallback, live booking and reliable real-time availability. None is implemented.
 
-- API generation is unverified; the team is awaiting key-rotation guidance.
+- Online access depends on a valid course key, connectivity and provider availability.
 - Static pages may be stale. Holidays and temporary closures are not verified.
 - Phrase-based medical filtering is bypassable; it is not a safety guarantee.
 - Conflict detection is schedule-specific and verified offline only.
@@ -154,17 +153,10 @@ fallback, live booking and reliable real-time availability. None is implemented.
 - The app deliberately persists no chat histories. Online mode sends questions
   and source passages to the configured provider; its retention is outside the app.
 
-## Repository access and submission
+## Final project links
 
-This prepared release is hosted in the private team repository:
+- [Public project webpage](https://ailt9019-g51-clinic-navigator.yuzhenxiang6.chatgpt.site)
+- This GitHub repository is public. The application runs locally and the public project webpage explains the implementation and evidence.
+- Final Moodle submission: one team ZIP containing `report.pdf` and `submission_links.txt` with separate YouTube presentation and demo links.
 
-https://github.com/yuzhenxiang6-dotcom/AILT9019-Clinic-Navigator
-
-Grant the course staff access before submission; their access has not been
-verified. Put this real URL in `repository_link.txt` and ask a classmate to
-repeat the sample workflow from a fresh download.
-
-The Moodle ZIP needs an MP4 of at most 60 seconds, a real repository URL in
-`repository_link.txt`, and the completed one-page status sheet. Video captions
-or narration are required. The source archive alone is not the final submission.
-See [CHANGELOG_SUBMISSION.md](CHANGELOG_SUBMISSION.md) for the preparation changes.
+Midterm preparation history is preserved in [CHANGELOG_SUBMISSION.md](CHANGELOG_SUBMISSION.md).

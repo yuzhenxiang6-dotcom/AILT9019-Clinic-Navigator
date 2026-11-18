@@ -1,3 +1,7 @@
+# Team recording guide
+
+This file records the October midterm workflow. The 60-second limit below applies only to that checkpoint. For the final, record a separate Zoom presentation (maximum three minutes, each member speaks with full name visible) and a genuine application demo (no duration limit), then submit separate YouTube links.
+
 # 中期演示录屏指南
 
 视频由小组自行录制。本文件是操作建议，老师的正式要求优先。
