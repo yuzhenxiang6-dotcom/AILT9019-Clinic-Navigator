@@ -1,4 +1,4 @@
-Command: python ingest.py --out /tmp/tmprzlf5epp/passages.json
+Command: python ingest.py --out /tmp/tmpip554bak/passages.json
 Mode: forced offline; no paid API call
 Exit code: 0
 
@@ -11,7 +11,7 @@ Exit code: 0
 [*] Parsing S4.html -> source_id=S4
     -> 12 passages
 
-[OK] Wrote 66 passages to /tmp/tmprzlf5epp/passages.json
+[OK] Wrote 66 passages to /tmp/tmpip554bak/passages.json
      S1: 8
      S2: 22
      S3: 24

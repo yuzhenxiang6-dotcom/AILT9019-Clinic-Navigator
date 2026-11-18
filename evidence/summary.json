@@ -1,7 +1,7 @@
 {
-  "verified_at_utc": "2026-10-23T13:59:17.817341+00:00",
+  "verified_at_utc": "2026-11-18T05:04:02.957835+00:00",
   "python": "3.12.14",
-  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
   "direct_dependencies": {
     "beautifulsoup4": "4.15.0",
     "rank-bm25": "0.2.2",
@@ -47,7 +47,7 @@
       "command": [
         "ingest.py",
         "--out",
-        "/tmp/tmprzlf5epp/passages.json"
+        "/tmp/tmpip554bak/passages.json"
       ],
       "exit_code": 0,
       "log": "ingestion.txt"
